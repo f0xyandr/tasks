@@ -3,11 +3,15 @@ import 'gpu.dart';
 import 'ram.dart';
 
 class Computer {
-  RAM ram = RAM();
-  CPU cpu = CPU();
-  GPU gpu = GPU();
+  RAM ram;
+  CPU cpu;
+  GPU gpu;
 
-  Computer();
+  Computer({required this.ram, required this.gpu, required this.cpu});
+
+  display() {
+    print("$cpu\n$gpu\n$ram");
+  }
 
   powerOn() {
     print("Компьютер включен");
